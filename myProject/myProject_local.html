@@ -20,10 +20,20 @@
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
-		<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
+		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 				<input type=text id="cloud_name" value="command">
 				<input type=text id="cloud_value" value="Hit the Ball">
 				<input type=text id="cloud_action_val" value="0">
+				<textarea id="cloud_code">
+from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
+
+club = Motor('A')
+
+club.run_to_position(350, direction='counterclockwise', speed=10)
+club.run_to_position(120, direction='clockwise', speed=CLOUD[motor_speed])
+wait_for_seconds(1)
+club.run_to_position(45, direction='counterclockwise', speed=10)</textarea>
 		</div>
 
 		<div type="cloud_check" cloud_compare="equal" cloud_action="run_slot">
@@ -48,18 +58,6 @@
 <body>
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
-
-	  <div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
-			<input type=text id="cloud_name" value="motor_speed">
-      <input type=text id="cloud_value" value="0">
-      <input type=text id="cloud_action_val" value="0">
-      <textarea id="cloud_code">from spike import Motor
-# motor connected to A:
-my_motor = Motor('A')
-# replace with speed value from cloud
-my_motor.start(REPLACE[cloud_current])
-</textarea>
-    </div>
 
 	</div>
 

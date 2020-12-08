@@ -13,6 +13,10 @@
 		<service-airtable id="service_airtable" tablename="FinalProject"></service-airtable>
 	</div>
 
+	<div style="z-index: -1; opacity: 0.3; width:100%; height:100%; background-repeat: no-repeat; position: absolute; background-image: url('https://www.lawnstarter.com/blog/wp-content/uploads/2018/11/lushgrass.jpg');">
+		&nbsp;
+	</div>
+
   <h1>Very Exciting Mini Golf Woot Woot!</h1>
 
 	<!-- CREATE YOUR PROJECT HERE -->
@@ -41,17 +45,17 @@
 	<table style="padding: 10px;">
     <tr><td></td><td align="center"><button cloud_action='update' cloud_name='command'>Forward</button></td><td></td></tr>
     <tr>
-      <td align="center"><button cloud_action='update' cloud_name='command'>Left</button></td>
-      <td align="center"><button cloud_action='update' cloud_name='command'>Stop</button></td>
-      <td align="center"><button cloud_action='update' cloud_name='command'>Right</button></td>
+      <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Left</button></td>
+      <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Stop</button></td>
+      <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Right</button></td>
     </tr>
     <tr><td></td><td align="center"><button cloud_action='update' cloud_name='command'>Backward</button></td><td></td></tr>
   </table>
 
 	<p style="font-family: Arial">Use these buttons to control the movement of the robot!</p>
 
-	<button cloud_action='update' cloud_name='command'>Hit the Ball</button>
-  <button cloud_action='update' cloud_name='command'>Pick up Ball</button>
+	<button class='button button3' cloud_action='update' cloud_name='command'>Hit the Ball</button>
+  <button class='button button3' cloud_action='update' cloud_name='command'>Pick up Ball</button>
 
 
 	<hr>

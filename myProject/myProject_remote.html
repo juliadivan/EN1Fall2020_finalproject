@@ -65,7 +65,8 @@
 				To move the robot left, move the slider to the left. To move the robot right, move the slider to the right.
 			</div>
 
-  <input type=range cloud_action='update' cloud_name='angle' cloud_min="-179" cloud_max="179" min='-179' max='179' value='0' />
+  <input type=range cloud_action='update' cloud_name='angle' cloud_min="-179" cloud_max="179" min='-179' max='179' value='0' oninput="amount.value=rangeInput.value">
+		<output id="amount" name="amount" for="rangeInput">0</output>
 <!-- </p> -->
 
 <div style="background: MediumSeaGreen; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">

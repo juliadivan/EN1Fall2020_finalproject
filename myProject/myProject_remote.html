@@ -54,13 +54,14 @@
 	<table style="padding: 10px;">
     <tr><td></td><td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Forward</button></td><td></td></tr>
     <tr>
-      <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Left</button></td>
+    <!--  <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Left</button></td> -->
       <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Stop</button></td>
-      <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Right</button></td>
+  <!--    <td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Right</button></td> -->
     </tr>
     <tr><td></td><td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Backward</button></td><td></td></tr>
   </table>
 
+  <input type=range cloud_action='update' cloud_name='motor_speed' cloud_min="-100" cloud_max="100" min='-100' max='100' value='0' />
 </p>
 
 <div style="background: CadetBlue; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">

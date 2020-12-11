@@ -58,11 +58,19 @@
 			<input type=text id="cloud_name" value="angle">
 			<input type=text id="cloud_value" value="0">
 			<input type=text id="cloud_action_val" value="0">
-			<textarea id="cloud_code">from spike import Motor
-# motor connected to A:
-my_motor = Motor('A')
-# replace with speed value from cloud
-my_motor.start(REPLACE[cloud_current])
+			<textarea id="cloud_code">from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
+from spike.control import wait_for_seconds, wait_until, Timer
+
+angle=CLOUD[angle]
+current=hub.motion_sensor.get_yaw_angle()
+if (angle-current)>0:
+    tank.start_tank(left_speed=-25, right_speed=25)
+    wait_until(hub.motion_sensor.get_yaw_angle, equal_to, angle)
+    tank.stop()
+elif (angle-current)<0:
+    tank.start_tank(left_speed=25, right_speed=-25)
+    wait_until(hub.motion_sensor.get_yaw_angle, equal_to, angle)
+    tank.stop()
 </textarea>
 		</div>
 

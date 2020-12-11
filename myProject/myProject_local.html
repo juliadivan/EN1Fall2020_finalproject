@@ -61,6 +61,16 @@
 			<textarea id="cloud_code">from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import wait_for_seconds, wait_until, Timer
 
+
+tank = MotorPair('B','F')
+hub = PrimeHub()
+lift = Motor('C')
+club = Motor('A')
+color_sensor = ColorSensor('E')
+from spike.control import wait_until
+from spike.operator import equal_to
+from spike.operator import greater_than_or_equal_to
+
 angle=CLOUD[angle]
 current=hub.motion_sensor.get_yaw_angle()
 if (angle-current)>0:
@@ -71,6 +81,7 @@ elif (angle-current)<0:
     tank.start_tank(left_speed=25, right_speed=-25)
     wait_until(hub.motion_sensor.get_yaw_angle, equal_to, angle)
     tank.stop()
+
 </textarea>
 		</div>
 

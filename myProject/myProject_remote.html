@@ -61,6 +61,19 @@
     <tr><td></td><td align="center"><button class='button button3' cloud_action='update' cloud_name='command'>Backward</button></td><td></td></tr>
   </table>
 
+	<div class="wrap">
+  <div class="slider-container">
+    <input id="range" type="range" min="1" max="100">
+    <svg id="slider" height="50" width="450">
+      <circle id="thumb" stroke="#fff" fill="#fff" r="10" />
+      <path id="curve" stroke="#fff" stroke-width="4" fill="none" />
+    </svg>
+  </div>
+</div>
+
+<div id="value"></div>
+
+
   <input type=range cloud_action='update' cloud_name='angle' cloud_min="-100" cloud_max="100" min='-100' max='100' value='0' />
 </p>
 
